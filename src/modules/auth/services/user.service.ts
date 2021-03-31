@@ -8,6 +8,7 @@ const userSubject: ReplaySubject<User> = new ReplaySubject(1);
 @Injectable()
 export class UserService {
     constructor() {
+
         this.user = {
             id: '123',
             firstName: 'Muslim',
@@ -17,6 +18,7 @@ export class UserService {
     }
 
     set user(user: User) {
+
         userSubject.next(user);
     }
 

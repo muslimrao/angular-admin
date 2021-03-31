@@ -25,7 +25,7 @@ import * as authServices from '@modules/auth/services';
 @NgModule({
     imports: [CommonModule, RouterModule, ...thirdParty],
     providers: [...appCommonServices.services, ...authServices.services, ...appCommonGuards.guards],
-    declarations: [...appCommonContainers.containers, ...appCommonComponents.components],
+    declarations: [...appCommonContainers.containers, ...appCommonComponents.components, ],
     exports: [...appCommonContainers.containers, ...appCommonComponents.components, ...thirdParty],
 })
 export class AppCommonModule {}

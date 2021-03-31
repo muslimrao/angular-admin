@@ -10,6 +10,7 @@ import { SBRouteData, SideNavItem } from '@modules/navigation/models';
 export class SideNavItemComponent implements OnInit {
     @Input() sideNavItem!: SideNavItem;
     @Input() isActive!: boolean;
+    @Input() rootClass!: String;
 
     expanded = false;
     routeData!: SBRouteData;

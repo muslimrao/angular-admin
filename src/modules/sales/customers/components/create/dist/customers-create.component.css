@@ -1,0 +1,15 @@
+.nav-tabs {
+  border-bottom: none;
+}
+
+.nav-tabs > .nav-item > li.active {
+  border-top-color: #3c8dbc;
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+  border-top: 4px solid #3c8dbc;
+}
+
+.nav-tabs .nav-link:hover {
+  border-bottom-color: white;
+}

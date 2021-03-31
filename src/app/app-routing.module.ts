@@ -19,6 +19,17 @@ const routes: Routes = [
                 m => m.DashboardRoutingModule
             ),
     },
+
+    {
+        path: 'sales',
+        loadChildren: () =>
+            import('@modules/sales/sales-routing.module').then(
+                m => m.SalesRoutingModule
+            ),
+    },
+
+
+
     {
         path: 'auth',
         loadChildren: () =>

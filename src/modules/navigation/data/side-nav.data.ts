@@ -38,7 +38,7 @@ export const sideNavItems: SideNavItems = {
 
             {
                 text: 'Product & Services',
-                link: '/dashboard',
+                link: '/sales/products',
             },
 
             {
@@ -48,7 +48,7 @@ export const sideNavItems: SideNavItems = {
 
             {
                 text: 'Customers',
-                link: '/dashboard',
+                link: '/sales/customers',
             },
 
             {
@@ -58,7 +58,7 @@ export const sideNavItems: SideNavItems = {
 
             {
                 text: 'Price',
-                link: '/dashboard',
+                link: '/sales/price',
             },
 
             {

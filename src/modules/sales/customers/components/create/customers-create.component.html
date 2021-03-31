@@ -1,0 +1,194 @@
+
+<sb-layout-dashboard
+>    <sb-table-heading title="Customers" [hideBreadcrumbs]="true"></sb-table-heading>
+    <sb-card-one>
+
+        <div class="card-body " style="padding:0px;">
+
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a (click)="toggleTabs(1)" [ngClass]="(selectTab == 1)?'active':''"  class="nav-link " href="javascript:;">Company</a>
+                </li>
+                <li class="nav-item">
+                  <a (click)="toggleTabs(2)" [ngClass]="(selectTab == 2)?'active':''" class="nav-link" href="javascript:;">Individual</a>
+                </li>
+              </ul>
+
+
+            <table class="table table_form customtable">
+
+                <tbody>
+                    <ng-template [ngIf]="(selectTab == 2)">
+                        <tr class="forTab2" >
+                            <td class="td_bg">First Name
+                                <span class="required_field ">*</span></td>
+                            <td class="td_bg" colspan="2">
+                            <div class="input-group">
+                            <input type="text" name="name" value="" id="name" size="50" class="form-control">            </div>
+                            </td>
+                        </tr>
+                        <tr class="forTab2">
+                            <td class="td_bg">Last Name
+                                <span class="required_field ">*</span></td>
+                            <td class="td_bg" colspan="2">
+                            <div class="input-group">
+                            <input type="text" name="name" value="" id="name" size="50" class="form-control">            </div>
+                            </td>
+                        </tr>
+
+                    </ng-template>
+
+                    <tr>
+                    <td class="td_bg">Company Name
+                        <span class="required_field ">*</span></td>
+                    <td class="td_bg" colspan="2">
+                    <div class="input-group">
+                    <input type="text" name="name" value="" id="name" size="50" class="form-control">            </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="td_bg">Address
+                        <span class="required_field ">*</span></td>
+                    <td class="td_bg" colspan="2">
+                    <div class="input-group">
+                    <input type="text" name="name" value="" placeholder="Address 1" id="name" size="50" class="form-control mb-40">            </div>
+
+                    <br>
+                    <div class="input-group">
+                        <input type="text" name="name" value="" placeholder="Address 2" id="name" size="50" class="form-control">            </div>
+                        <br>
+                        <div class="input-group">
+                            <input type="text" name="name" value="" placeholder="Address 3" id="name" size="50" class="form-control">            </div>
+                    </td>
+                </tr>
+
+
+
+
+
+                <tr>
+                    <td class="td_bg">City
+                        <span class="required_field ">*</span></td>
+                    <td class="td_bg" colspan="2">
+                    <div class="input-group">
+                    <input type="text" name="name" value="" id="name" size="50" class="form-control">            </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="td_bg">Zip Code
+
+                        <span class="required_field ">*</span></td>
+                    <td class="td_bg" colspan="2">
+                    <div class="input-group">
+                    <input type="text" name="name" value="" id="name" size="50" class="form-control">            </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="td_bg">Country
+
+                        <span class="required_field ">*</span></td>
+                    <td class="td_bg" colspan="2">
+                    <div class="input-group">
+                    <input type="text" name="name" value="" id="name" size="50" class="form-control">            </div>
+                    </td>
+                </tr>
+
+                <tr style="background-color: #cccccc61;">
+                    <td class="td_bg"><strong>Use same address for delivery</strong>
+                        <span class="required_field ">*</span></td>
+                    <td class="td_bg" colspan="2">
+                    <div class="input-group">
+
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-secondary " [ngClass]="(selectDeliveryOption == 0)? 'active':''" >
+                              <input (click)="toggleDeliveryAddress(0)" type="radio" name="options" id="option1" autocomplete="off" checked> No
+                            </label>
+                            <label class="btn btn-secondary" [ngClass]="(selectDeliveryOption == 1)? 'active':''" >
+                              <input (click)="toggleDeliveryAddress(1)" type="radio" name="options" id="option2" autocomplete="off"> Yes
+                            </label>
+                          </div>
+
+
+                    </div>
+                    </td>
+                </tr>
+
+
+                <tr class="class_deliveryaddress" *ngIf="selectDeliveryOption">
+                    <td class="td_bg">Delivery Address
+                        <span class="required_field ">*</span></td>
+                    <td class="td_bg" colspan="2">
+                    <div class="input-group">
+                    <input type="text" name="name" value="" placeholder="Address 1" id="name" size="50" class="form-control mb-40">            </div>
+
+                    <br>
+                    <div class="input-group">
+                        <input type="text" name="name" value="" placeholder="Address 2" id="name" size="50" class="form-control">            </div>
+                        <br>
+                        <div class="input-group">
+                            <input type="text" name="name" value="" placeholder="Address 3" id="name" size="50" class="form-control">            </div>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="td_bg">Phone Number
+
+                        <span class="required_field ">*</span></td>
+                    <td class="td_bg" colspan="2">
+                    <div class="input-group">
+                    <input type="text" name="name" value="" id="name" size="50" class="form-control">            </div>
+                    </td>
+                </tr>                <tr>
+                    <td class="td_bg">Email
+
+                        <span class="required_field ">*</span></td>
+                    <td class="td_bg" colspan="2">
+                    <div class="input-group">
+                    <input type="text" name="name" value="" id="name" size="50" class="form-control">            </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="td_bg">Website
+
+                        <span class="required_field ">*</span></td>
+                    <td class="td_bg" colspan="2">
+                    <div class="input-group">
+                    <input type="text" name="name" value="" id="name" size="50" class="form-control">            </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="td_bg">Business Id                        <span class="required_field ">*</span></td>
+                    <td class="td_bg" colspan="2">
+                    <div class="input-group">
+                    <input type="text" name="name" value="" id="name" size="50" class="form-control">            </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="td_bg">Operator Id
+                        <span class="required_field ">*</span></td>
+                    <td class="td_bg" colspan="2">
+                    <div class="input-group">
+                    <input type="text" name="name" value="" id="name" size="50" class="form-control">            </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="td_bg">Einvoice Id
+                        <span class="required_field ">*</span></td>
+                    <td class="td_bg" colspan="2">
+                    <div class="input-group">
+                    <input type="text" name="name" value="" id="name" size="50" class="form-control">            </div>
+                    </td>
+                </tr>          </tbody></table>
+
+                <sb-save-cancel></sb-save-cancel>
+
+        </div>
+    </sb-card-one>    </sb-layout-dashboard>

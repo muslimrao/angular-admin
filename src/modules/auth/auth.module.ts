@@ -20,6 +20,9 @@ import * as authGuards from './guards';
 /* Services */
 import * as authServices from './services';
 
+import { ShowMessagesModule } from '../show-messages/show-messages.module';
+import { NgxSpinnerService } from 'ngx-spinner';
+
 @NgModule({
     imports: [
         CommonModule,
@@ -28,9 +31,11 @@ import * as authServices from './services';
         FormsModule,
         AppCommonModule,
         NavigationModule,
+        ShowMessagesModule,
+
     ],
     providers: [...authServices.services, ...authGuards.guards],
-    declarations: [...authContainers.containers, ...authComponents.components],
+    declarations: [...authContainers.containers, ...authComponents.components,],
     exports: [...authContainers.containers, ...authComponents.components],
 })
 export class AuthModule {}

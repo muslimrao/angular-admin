@@ -19,6 +19,7 @@ import * as utilityGuards from './guards';
 
 /* Services */
 import * as utilityServices from './services';
+import { SaveCancelComponent } from './components/save-cancel/save-cancel.component';
 
 @NgModule({
     imports: [
